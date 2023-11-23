@@ -1,4 +1,4 @@
-namespace FinancialInstruments.UnityTests.Business
+namespace FinancialInstruments.UnityTests.Services
 {
     [TestClass]
     public partial class FinancialInstrumentTests : BaseTest
