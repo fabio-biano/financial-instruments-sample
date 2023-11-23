@@ -1,0 +1,12 @@
+﻿global using FinancialInstruments.Infrastructure.Contracts;
+global using FinancialInstruments.Infrastructure.Data.Entities;
+global using FinancialInstruments.Infrastructure.Data.Repositories;
+global using Microsoft.EntityFrameworkCore;
+global using Microsoft.EntityFrameworkCore.Infrastructure;
+global using Microsoft.EntityFrameworkCore.Internal;
+global using Microsoft.EntityFrameworkCore.Metadata.Builders;
+global using Microsoft.Extensions.Configuration;
+global using Microsoft.Extensions.DependencyInjection;
+global using System.ComponentModel.DataAnnotations.Schema;
+global using System.Linq.Expressions;
+global using System.Reflection;

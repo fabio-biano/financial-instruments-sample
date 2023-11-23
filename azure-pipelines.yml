@@ -1,0 +1,21 @@
+trigger:
+  branches:
+    include:
+      - '*'
+  tags:
+    include:
+      - 'v*'
+
+pool:
+  vmImage: 'windows-latest'
+
+resources:
+  repositories:
+    - repository: dotnet-pipeline
+      type: git
+      name: DevOps Pipelines/dotnet-pipeline
+
+extends:
+  template: template.yml@dotnet-pipeline
+  parameters:
+    publishType: 'Container'
