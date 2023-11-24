@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FinancialInstruments.Integr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FinancialInstruments.Infrastructure", "src\FinancialInstruments.Infrastructure\FinancialInstruments.Infrastructure.csproj", "{8636E1A7-7AE1-40E9-9CBF-EBF56242F109}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinancialInstruments.Migrations", "src\FinancialInstruments.Migrations\FinancialInstruments.Migrations.csproj", "{8135808A-68CF-41F3-BF49-008DB8B4447E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FinancialInstruments.Migrations", "src\FinancialInstruments.Migrations\FinancialInstruments.Migrations.csproj", "{8135808A-68CF-41F3-BF49-008DB8B4447E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinancialInstruments.Api", "src\FinancialInstruments.Api\FinancialInstruments.Api.csproj", "{5F6D5888-B494-4D70-881E-1484D31A1AF4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{8135808A-68CF-41F3-BF49-008DB8B4447E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8135808A-68CF-41F3-BF49-008DB8B4447E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8135808A-68CF-41F3-BF49-008DB8B4447E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F6D5888-B494-4D70-881E-1484D31A1AF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F6D5888-B494-4D70-881E-1484D31A1AF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F6D5888-B494-4D70-881E-1484D31A1AF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F6D5888-B494-4D70-881E-1484D31A1AF4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
