@@ -17,11 +17,11 @@
             if (financialInstruments.Any(i => i is null))
                 throw new ArgumentException("Invalid argument. The 'financialInstruments list contains null objects.");
 
-            Parallel.ForEach(financialInstruments, i =>
+            foreach (var i in financialInstruments)
             {
-                var category = repository.GetByValueRange(i.MarketValue).FirstOrDefault();
+                var category = repository.GetByValueRange(i.MarketValue).Result.FirstOrDefault();
                 i.Category = (category is null || string.IsNullOrWhiteSpace(category.Category)) ? "Unknown" : category.Category;
-            });
+            };
         }
 
         public void Dispose()

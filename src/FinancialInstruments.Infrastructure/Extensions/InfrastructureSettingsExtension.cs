@@ -1,4 +1,6 @@
-﻿namespace FinancialInstruments.Infrastructure.Extensions;
+﻿using FinancialInstruments.Infrastructure.Data.Persistence;
+
+namespace FinancialInstruments.Infrastructure.Extensions;
 
 public static class InfrastructureSettingsExtension
 {

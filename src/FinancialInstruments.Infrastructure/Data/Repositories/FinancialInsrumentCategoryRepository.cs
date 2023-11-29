@@ -9,37 +9,40 @@ public class FinancialInsrumentCategoryRepository : IFinancialInstrumentCategory
         _dbContext = dbContext;
     }
 
-    public bool Delete(FinancialInstrumentCategory entity)
+    public async Task<bool> Delete(FinancialInstrumentCategory entity)
     {
-        _dbContext.FinancialInstrumentCategories.Remove(entity);
-        return _dbContext.SaveChanges() > 0;
+        return await Task.Run(() =>
+        {
+            _dbContext.FinancialInstrumentCategories.Remove(entity);
+            return _dbContext.SaveChanges() > 0;
+        });
     }
 
-    public FinancialInstrumentCategory GetById(long id)
+    public async Task<FinancialInstrumentCategory> GetById(long id)
     {
-        return _dbContext.FinancialInstrumentCategories.Find(id);
+        return await _dbContext.FinancialInstrumentCategories.FindAsync(id);
     }
 
-    public IEnumerable<FinancialInstrumentCategory> GetByValueRange(double valueRange)
+    public async Task<IEnumerable<FinancialInstrumentCategory>> GetByValueRange(double valueRange)
     {
-        return Get(i => i.MinimumMarketValue <= valueRange && i.MaximumMarketValue >= valueRange);
+        return await Get(i => i.MinimumMarketValue <= valueRange && i.MaximumMarketValue >= valueRange);
     }
 
-    public IEnumerable<FinancialInstrumentCategory> Get(Expression<Func<FinancialInstrumentCategory, bool>> action)
+    public async Task<IEnumerable<FinancialInstrumentCategory>> Get(Expression<Func<FinancialInstrumentCategory, bool>> action)
     {
-        return _dbContext.FinancialInstrumentCategories.Where(action).ToList();
+        return await Task.Run(() => _dbContext.FinancialInstrumentCategories.Where(action).ToList());
     }
 
-    public bool Insert(FinancialInstrumentCategory entity)
+    public async Task<bool> Insert(FinancialInstrumentCategory entity)
     {
         _dbContext.FinancialInstrumentCategories.Add(entity);
-        return _dbContext.SaveChanges() > 0;
+        return await _dbContext.SaveChangesAsync() > 0;
     }
 
-    public bool Update(FinancialInstrumentCategory entity)
+    public async Task<bool> Update(FinancialInstrumentCategory entity)
     {
         _dbContext.FinancialInstrumentCategories.Update(entity);
-        return _dbContext.SaveChanges() > 0;
+        return await _dbContext.SaveChangesAsync() > 0;
     }
 
     public void Dispose()

@@ -1,4 +1,5 @@
-global using FinancialInstruments.Infrastructure.Data.Repositories;
+global using FinancialInstruments.Domain.Contracts;
+global using FinancialInstruments.Infrastructure.Data.Persistence;
 global using Microsoft.Data.SqlClient;
 global using Microsoft.EntityFrameworkCore;
 global using Microsoft.Extensions.Configuration;

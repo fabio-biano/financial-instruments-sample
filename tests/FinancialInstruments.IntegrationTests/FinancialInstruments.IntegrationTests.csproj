@@ -33,6 +33,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\src\FinancialInstruments.Api\FinancialInstruments.Api.csproj" />
+    <ProjectReference Include="..\..\src\FinancialInstruments.Domain\FinancialInstruments.Domain.csproj" />
     <ProjectReference Include="..\..\src\FinancialInstruments.Infrastructure\FinancialInstruments.Infrastructure.csproj" />
   </ItemGroup>
 

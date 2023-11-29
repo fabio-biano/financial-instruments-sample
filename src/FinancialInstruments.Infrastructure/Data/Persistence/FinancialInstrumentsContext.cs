@@ -1,4 +1,4 @@
-﻿namespace FinancialInstruments.Infrastructure.Data.Repositories
+﻿namespace FinancialInstruments.Infrastructure.Data.Persistence
 {
     public class FinancialInstrumentsContext : DbContext, IDbContext
     {
@@ -25,8 +25,8 @@
                 new FinancialInstrumentCategory
                 {
                     Id = 1,
-                    MinimumMarketValue = 0.01,
-                    MaximumMarketValue = 999999.99,
+                    MinimumMarketValue = 0.00,
+                    MaximumMarketValue = 1000000.00,
                     Category = "Low Value"
                 });
 
@@ -43,7 +43,7 @@
                 new FinancialInstrumentCategory
                 {
                     Id = 3,
-                    MinimumMarketValue = 5000000.01,
+                    MinimumMarketValue = 5000000.00,
                     MaximumMarketValue = double.MaxValue,
                     Category = "High Value"
                 });

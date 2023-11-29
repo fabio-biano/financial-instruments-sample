@@ -13,6 +13,5 @@ AS
 	CROSS APPLY (
 		SELECT TOP 1 [Id], [Category], [MinimumMarketValue], [MaximumMarketValue], [CreatedAt], [UpdatedAt]
 		FROM [FinancialInstrumentCategory]
-		WHERE [MinimumMarketValue] <= FI.[MarketValue]
-		  AND MaximumMarketValue >= FI.[MarketValue]
+		WHERE FI.[MarketValue] BETWEEN [MinimumMarketValue] AND [MaximumMarketValue]
 	) AS CAT
